@@ -1,0 +1,39 @@
+@startuml Direction
+abstract class Direction {
+    opposite(): Direction
+    ofPoint(aPoint): Point
+}
+Direction <|-- Top
+Direction <|-- Bottom
+Direction <|-- Left
+Direction <|-- Right
+Direction <|-- TopLeft
+Direction <|-- TopRight
+Direction <|-- BottomLeft
+Direction <|-- BottomRight
+
+class Top{
+    opposite(): Bottom
+}
+class Bottom{
+    opposite(): Top
+}
+class Left{
+    opposite(): Right
+}
+class Right{
+    opposite(): Left
+}
+class TopLeft{
+    opposite(): BottomRight
+}
+class TopRight{
+    opposite(): BottomLeft
+}
+class BottomLeft{
+    opposite(): TopRight
+}
+class BottomRight{
+    opposite(): TopLeft
+}
+@enduml

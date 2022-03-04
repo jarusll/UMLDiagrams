@@ -1,0 +1,9 @@
+@startuml Array2D
+    class Array2D {
+        Number width
+        Number height
+        allSubarrays(aPointTopLeft, aPointBottomRight)
+        subArray(aPointTopLeft, aPointBottomRight)
+        transpose()
+    }
+@enduml
